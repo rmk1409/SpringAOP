@@ -2,8 +2,9 @@
  * Created by r.pogorelov on 16.09.2016.
  */
 public class ClassWithMethods {
-    public void msg1() {
+    public void msg1() throws Exception {
         System.out.println("msg1() invoked");
+        throw new Exception();
     }
 
     int msg2() {

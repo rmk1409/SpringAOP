@@ -33,4 +33,10 @@ public class Track {
         Object proceed = point.proceed();
         System.out.println("End around..."+proceed);
     }
+
+    //it will applied only if method throws exception
+    @AfterThrowing(pointcut = "execution(* ClassWithMethods.*(..))", throwing = "er")
+    public void afterThrow(JoinPoint point, Throwable er){
+        System.out.printf("An exception is happened..., in method(%s), exception: %s\n", point.getSignature().toString(), er.toString());
+    }
 }

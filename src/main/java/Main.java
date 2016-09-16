@@ -16,7 +16,11 @@ public class Main {
         int x = bean.m();
         System.out.println(x);
 
-        bean.msg1();
+        try {
+            bean.msg1();
+        } catch (Exception e) {
+            //
+        }
         bean.msg2();
         bean.msg3();
     }
